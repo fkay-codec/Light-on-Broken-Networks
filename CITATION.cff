@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Kotsogiannis"
+    given-names: "Foivos"
+  - family-names: "Lührs"
+    given-names: "Michael"
+  - family-names: "Rutten"
+    given-names: "Geert-Jan M."
+  - family-names: "Reid"
+    given-names: "Andrew T."
+  - family-names: "Deprez"
+    given-names: "Sabine"
+  - family-names: "Lambrecht"
+    given-names: "Maarten"
+  - family-names: "De Baene"
+    given-names: "Wouter"
+  - family-names: "Sleurs"
+    given-names: "Charlotte"
+title: "Light on Broken Networks: Resting-State fNIRS as a Tool for Connectivity Mapping in Children with Acquired Brain Injury"
+version: 1.0.0
+doi: "https://doi.org/10.64898/2026.03.06.710143"
+date-released: 2026-03-10
+url: "https://www.biorxiv.org/content/10.64898/2026.03.06.710143v1"
