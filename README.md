@@ -9,13 +9,13 @@
 **DOI** https://doi.org/10.64898/2026.03.06.710143
 
 
-###This repository contains code for:
+### This repository contains code for:
 
 Foivos Kotsogiannis et al. (2026). Light on Broken Networks: Resting-State fNIRS as a Tool for Connectivity Mapping
 
 bioRxiv. https://doi.org/10.64898/2026.03.06.710143
 
-###**Please cite the original paper on bioRxiv**
+### **Please cite the original paper on bioRxiv**
 
 
 ---
