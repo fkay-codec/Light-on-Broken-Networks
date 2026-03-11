@@ -1,9 +1,13 @@
 # Light on Broken Networks: Resting-State fNIRS as a Tool for Connectivity Mapping
 
 **Author:** Foivos Kotsogiannis
+
 **Email:** f.kotsogiannisteftsoglou@alumni.maastrichtuniversity.nl
+
 **Last Updated:** January 9, 2026
+
 **DOI** https://doi.org/10.64898/2026.03.06.710143
+
 
 This repository contains code for:
 
