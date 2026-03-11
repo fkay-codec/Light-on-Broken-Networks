@@ -1,8 +1,18 @@
 # Light on Broken Networks: Resting-State fNIRS as a Tool for Connectivity Mapping
 
-**Author:** AfterPublication
-**Email:** AfterPublication
+**Author:** Foivos Kotsogiannis
+**Email:** f.kotsogiannisteftsoglou@alumni.maastrichtuniversity.nl
 **Last Updated:** January 9, 2026
+**DOI** https://doi.org/10.64898/2026.03.06.710143
+
+This repository contains code for:
+
+Foivos Kotsogiannis et al. (2026). Light on Broken Networks: Resting-State fNIRS as a Tool for Connectivity Mapping
+
+bioRxiv. https://doi.org/10.64898/2026.03.06.710143
+
+**Please cite the original paper on bioRxiv**
+
 
 ---
 
@@ -742,8 +752,8 @@ see file (`Channels to Brain Areas using fOLD_updated_droppedmissing.xlsx`) or t
 ## Contact
 
 For questions or issues with this pipeline:
-- **Author:** AfterPublication
-- **Email:** AfterPublication
+- **Author:** Foivos Kotsogiannis
+- **Email:** f.kotsogiannisteftsoglou@alumni.maastrichtuniversity.nl
 
 ---
 
