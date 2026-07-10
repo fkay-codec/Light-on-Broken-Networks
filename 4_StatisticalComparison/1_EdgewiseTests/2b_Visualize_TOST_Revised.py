@@ -106,13 +106,15 @@ def plot_tost_curve(equiv_bounds_z, y_axis, title="TOST Across Fisher-z Equivale
     # plt.xticks(equiv_bounds_z[::5], [f"{z:.3f}" for z in equiv_bounds_z[::5]], rotation=90, fontsize=4)  # every 4th tick
     # plt.xticks(equiv_bounds_z, [f"{z:.3f}" for z in equiv_bounds_z], rotation=90, fontsize=2)  # show all x-ticks, smaller font
     # All ticks
-    plt.xticks(equiv_bounds_z, 
-            [f"{z:.3f}" if i % 5 == 0 else '' for i, z in enumerate(equiv_bounds_z)],
+    ticks = np.round(np.arange(0.01, 0.401, 0.01), 2)
+
+    plt.xticks(ticks, 
+            [f"{t:.2f}" for t in ticks],#if i % 5 == 0 else '' for i, z in enumerate(equiv_bounds_z)],
             rotation=90, 
             fontsize=9)  # adjust font as needed
     #alternative 50$ annotation
     # Add an arrow pointing to the 50% bound
-    plt.annotate(f'ε={bound_50:.3f} (50% edges)',
+    plt.annotate(f'ε={bound_50:.3f}',#  (50% edges)',
                 xy=(bound_50, 50), 
                 xytext=(bound_50 + 0.03, 35),
                 arrowprops=dict(arrowstyle='->', color='maroon', lw=1.2),
@@ -141,14 +143,13 @@ def plot_tost_curve(equiv_bounds_z, y_axis, title="TOST Across Fisher-z Equivale
 
 
 # replicate the bounds
-min_bound = 0.04
+min_bound = 0.01
 max_bound = 0.4
 # create the equivalence bounds array that will increase by 0.01
-equivalence_bounds = np.arange(min_bound, max_bound, 0.002).round(3)
+equivalence_bounds = np.round(np.linspace(min_bound, max_bound, int(round((max_bound - min_bound) / 0.001)) + 1), 3)
 # print("equiv bounds\n", equivalence_bounds)
 
-# convert the equivalence bounds from r to z using Fisher transformation
-equivalence_bounds_z = np.arctanh(equivalence_bounds).round(5)
+
 # print("equiv bounds (z)\n", equivalence_bounds_z)
 # print(len(equivalence_bounds_z))
 # quit()
@@ -208,11 +209,11 @@ biv_hbo_bounds, biv_hbo_counts = count_sigificant_edges_folder_path(biv_hbo_res_
 biv_hbr_bounds, biv_hbr_counts = count_sigificant_edges_folder_path(biv_hbr_res_path)
 
 # now we can create the dataframes
-tost_summary_partial['Equivalence_Bound_z'] = equivalence_bounds_z.tolist()
+tost_summary_partial['Equivalence_Bound_z'] = equivalence_bounds.tolist()
 tost_summary_partial['HbO_Significant_Percentage'] = par_hbo_counts
 tost_summary_partial['HbR_Significant_Percentage'] = par_hbr_counts
 
-tost_summary_bivariate['Equivalence_Bound_z'] = equivalence_bounds_z.tolist()
+tost_summary_bivariate['Equivalence_Bound_z'] = equivalence_bounds.tolist()
 tost_summary_bivariate['HbO_Significant_Percentage'] = biv_hbo_counts
 tost_summary_bivariate['HbR_Significant_Percentage'] = biv_hbr_counts
 
